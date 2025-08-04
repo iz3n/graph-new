@@ -21,7 +21,16 @@ import {
 const Services = () => {
   return (
     <>
-      <Flex h={"93vh"} w={"100%"} justify={"center"} align={"center"} gap={73}>
+      <Flex
+        h={{ base: "auto", md: "93vh" }}
+        w={"100%"}
+        justify={"center"}
+        align={"center"}
+        gap={73}
+        direction={{ base: "column-reverse", md: "row" }}
+        py={{ base: 40, md: 0 }}
+        px={{ base: 16, md: 0 }}
+      >
         <Box maw={511}>
           <Text component="h1" fz={39} fw={400}>
             We have the <strong>best solution</strong> for your successful.
@@ -31,7 +40,7 @@ const Services = () => {
             performance and precision.
           </Text>
         </Box>
-        <Image src="/world.svg" alt="services" w={"50%"} />
+        <Image src="/world.svg" alt="services" w={{ base: "80%", md: "50%" }} />
       </Flex>
       <Flex bg={"#E6E6E6"} py={80} px={"10%"} wrap={"wrap"}>
         <Text ta={"center"} w={"100%"} component="h1" fz={39} fw={400} mb={64}>
@@ -57,7 +66,7 @@ const Services = () => {
               </Text>
             </Box>
           </Flex>
-          <Flex maw={397}>
+          <Flex w={"100%"}>
             <Divider
               size={4}
               style={{ borderRadius: 8 }}
@@ -72,7 +81,7 @@ const Services = () => {
               </Text>
             </Box>
           </Flex>
-          <Flex maw={397}>
+          <Flex w={"100%"}>
             <Divider
               size={4}
               style={{ borderRadius: 8 }}
@@ -87,7 +96,7 @@ const Services = () => {
               </Text>
             </Box>
           </Flex>
-          <Flex maw={397}>
+          <Flex w={"100%"}>
             <Divider
               size={4}
               style={{ borderRadius: 8 }}
@@ -102,7 +111,7 @@ const Services = () => {
               </Text>
             </Box>
           </Flex>
-          <Flex maw={397}>
+          <Flex w={"100%"}>
             <Divider
               size={4}
               style={{ borderRadius: 8 }}
@@ -170,54 +179,95 @@ const Services = () => {
         </Flex>
       </Flex>
       <BackgroundImage src="/Rectangle.png" w={"100%"} h={"100%"}>
-        <Flex h={"80vh"} justify={"center"} align={"center"}>
-          <Flex>
-            <Card bg={"#E6E6E6"} w={151} p={16} h={232} radius={"16"}>
-              <Image src="/KTC.png" w={119} h={119} mb={16} />
-              <Text fz={10} ta={"center"} fw={400} lh={"150%"} c={"#333"}>
+        <Flex
+          h={"80vh"}
+          w={"100%"}
+          justify={"center"}
+          align={"center"}
+          direction={{ base: "column-reverse", md: "row" }}
+          gap={{base: 48, md: 0}}
+        >
+          <Flex direction={{base: "column", md: "row"}} gap={16} ms={16} me={16}>
+            <Card bg={"#E6E6E6"} w={{base: "100%", md: 151}} p={16} h={232} radius={"16"} ta={"center"} style={{ boxShadow: "0px 2px 7px 0px rgba(0, 0, 0, 0.25)" }}>
+              <Image src="/KTC.png" w={119} h={119} mb={16} m={"auto"}/>
+              <Text fz={{base: 13, md: 10}} ta={"center"} fw={400} lh={"150%"} c={"#333"} maw={{base: 112, md: "100%"}} m={"auto"}>
                 Official holding company of Sinamed Company
               </Text>
             </Card>
+            <Flex direction={"column"} gap={8} ms={{base: 0, md: 16}}>
+              <Card
+                bg={"#12565B"}
+                p={16}
+                w={{base: "100%", md: 262}}
+                radius={"16"}
+                style={{ boxShadow: "0px 2px 7px 0px rgba(0, 0, 0, 0.25)" }}
+              >
+                <Flex w={"100%"}>
+                  <Image src="/sinamed.svg" w={100} h={28} my={"auto"} />
+                  <Text
+                    fz={{base: 13, md: 10}}
+                    ms={{base: 16, md: "auto"}}
+                    fw={400}
+                    lh={"150%"}
+                    c={"#fff"}
+                    w={{base: "100%", md: 112}}
+                  >
+                    E-Commerce and Drophipping Medical Equipment
+                  </Text>
+                </Flex>
+              </Card>
+              <Card
+                bg={"#05609A"}
+                p={16}
+                w={{base: "100%", md: 359}}
+                radius={"16"}
+                h={62}
+                style={{ boxShadow: "0px 2px 7px 0px rgba(0, 0, 0, 0.25)" }}
+              >
+                <Flex w={"100%"}>
+                  <Image src="/aksablue.svg" w={100} h={28} my={"auto"} />
+                  <Text fz={{base: 13, md: 10}} ms={16} fw={400} lh={"150%"} c={"#fff"}>
+                    Website for product showcases and a company dashboard for
+                    national auctions.
+                  </Text>
+                </Flex>
+              </Card>
+              <Card
+                bg={"#CCC"}
+                p={16}
+                w={{base: "100%", md: 359}}
+                radius={"16"}
+                style={{ boxShadow: "0px 2px 7px 0px rgba(0, 0, 0, 0.25)" }}
+              >
+                <Flex w={"100%"}>
+                  <Image src="/bartarkhodro.svg" w={100} h={28} my={"auto"} />
+                  <Text fz={{base: 13, md: 10}} ms={16} fw={400} lh={"150%"} c={"#fff"}>
+                    Website for service introductions and a search engine for
+                    spare parts of heavy and semi-heavy vehicles.
+                  </Text>
+                </Flex>
+              </Card>
+            </Flex>
           </Flex>
-          <Flex direction={"column"} gap={8} ms={16}>
-            <Card bg={"#12565B"} p={16} w={262} radius={"16"} style={{boxShadow: "0px 2px 7px 0px rgba(0, 0, 0, 0.25)"}}>
-              <Flex w={"100%"}>
-                <Image src="/sinamed.svg" w={100} h={28} my={"auto"} />
-                <Text
-                  fz={10}
-                  ms={"auto"}
-                  fw={400}
-                  lh={"150%"}
-                  c={"#fff"}
-                  w={112}
-                >
-                  E-Commerce and Drophipping Medical Equipment
-                </Text>
-              </Flex>
-            </Card>
-            <Card bg={"#05609A"} p={16} w={359} radius={"16"} h={62} style={{boxShadow: "0px 2px 7px 0px rgba(0, 0, 0, 0.25)"}}>
-              <Flex w={"100%"}>
-                <Image src="/aksablue.svg" w={100} h={28} my={"auto"} />
-                <Text fz={10} ms={16} fw={400} lh={"150%"} c={"#fff"}>
-                  Website for product showcases and a company dashboard for
-                  national auctions.
-                </Text>
-              </Flex>
-            </Card>
-            <Card bg={"#CCC"} p={16} w={359} radius={"16"} style={{boxShadow: "0px 2px 7px 0px rgba(0, 0, 0, 0.25)"}}>
-              <Flex w={"100%"}>
-                <Image src="/bartarkhodro.svg" w={100} h={28} my={"auto"} />
-                <Text fz={10} ms={16} fw={400} lh={"150%"} c={"#fff"}>
-                  Website for service introductions and a search engine for
-                  spare parts of heavy and semi-heavy vehicles.
-                </Text>
-              </Flex>
-            </Card>
-          </Flex>
-          <Box ms={80} w={328}>
-            <Text fz={24} fw={600}>Our Portfolio</Text>
-            <Text fz={16} fw={400} c={"#333"}>Lorem ipsum dolor sit amet consectetur. Vitae sed venenatis id condimentum nulla duis maecenas magna.</Text>
-            <Button mt={32} rightSection={<IconArrowRight size={16} />} w={"fit-content"} radius={8} bg={"#000"}>Portfolio</Button>
+
+          <Box ms={{base: 0, md: 80}} w={{base: "100%", md: 328}} px={{base: 16, md: 0}} ta={{base: "center", md: "left"}}>
+            <Text fz={24} fw={600}>
+              Our Portfolio
+            </Text>
+            <Text fz={16} fw={400} c={"#333"}>
+              Lorem ipsum dolor sit amet consectetur. Vitae sed venenatis id
+              condimentum nulla duis maecenas magna.
+            </Text>
+            <Button
+              mt={32}
+              rightSection={<IconArrowRight size={16} />}
+              w={{base: "50%", md: "fit-content"}}
+              radius={8}
+              bg={"#000"}
+              h={{base: 48, md: 40}}
+            >
+              Portfolio
+            </Button>
           </Box>
         </Flex>
       </BackgroundImage>
