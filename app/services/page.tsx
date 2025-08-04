@@ -142,17 +142,17 @@ const Services = () => {
         </Box>
         <Image src="/world.svg" alt="services" w={{ base: "80%", md: "50%" }} />
       </Flex>
-      <Flex bg={"#E6E6E6"} py={80} px={"10%"} wrap={"wrap"}>
+      <Flex bg={"#E6E6E6"} py={80} px={{base: 16, md: "10%"}} wrap={"wrap"}>
         <Text ta={"center"} w={"100%"} component="h1" fz={39} fw={400} mb={64}>
           Our Services
         </Text>
-        <Flex w={"49%"} wrap={"wrap"} gap={48}>
+        <Flex w={{base: "100%", md: "49%"}} wrap={"wrap"} gap={48}>
           <Flex maw={397} onClick={() => handleClick(0)} style={{ cursor: "pointer" }}>
             <Divider
               size={4}
               style={{ borderRadius: 8 }}
               orientation="vertical"
-              color="#A48EAA"
+              color={active === 0 ? "#4A1D56" : "#A48EAA"}
               me={48}
             />
             <IconSearch size={ active === 0 ? 38 : 30} color={active === 0 ? "#000" : "#666"} />
@@ -162,12 +162,31 @@ const Services = () => {
               </Text>
             </Box>
           </Flex>
+          <Flex direction={"column"} gap={16} hiddenFrom={"md"} display={active === 0 ? "flex" : "none"} style={{transition: "all 0.5s ease-in-out"}}>
+          {services[0].map((service, index) => (
+          <Card key={index} radius={"16"} h={"fit-content"}>
+            <Flex gap={16}>
+              <Text fz={16} fw={600}>
+                {index + 1}.
+              </Text>
+              <Box>
+                <Text fz={16} fw={600}>
+                  {service.title}
+                </Text>
+                <Text fz={13} fw={400} c={"#333"}>
+                  {service.description}
+                </Text>
+              </Box>
+            </Flex>
+          </Card>
+          ))}
+          </Flex>
           <Flex w={"100%"} onClick={() => handleClick(1)} style={{ cursor: "pointer" }}>
             <Divider
               size={4}
               style={{ borderRadius: 8 }}
               orientation="vertical"
-              color="#A48EAA"
+              color={active === 1 ? "#4A1D56" : "#A48EAA"}
               me={48}
             />
             <IconHeartHandshake size={ active === 1 ? 38 : 30} color={active === 1 ? "#000" : "#666"} />
@@ -177,12 +196,31 @@ const Services = () => {
               </Text>
             </Box>
           </Flex>
+          <Flex direction={"column"} gap={16} hiddenFrom={"md"} display={active === 1 ? "flex" : "none"} style={{transition: "all 0.5s ease-in-out"}}>
+          {services[1].map((service, index) => (
+          <Card key={index} radius={"16"} h={"fit-content"}>
+            <Flex gap={16}>
+              <Text fz={16} fw={600}>
+                {index + 1}.
+              </Text>
+              <Box>
+                <Text fz={16} fw={600}>
+                  {service.title}
+                </Text>
+                <Text fz={13} fw={400} c={"#333"}>
+                  {service.description}
+                </Text>
+              </Box>
+            </Flex>
+          </Card>
+          ))}
+          </Flex>
           <Flex w={"100%"} onClick={() => handleClick(2)} style={{ cursor: "pointer" }}>
             <Divider
               size={4}
               style={{ borderRadius: 8 }}
               orientation="vertical"
-              color="#A48EAA"
+              color={active === 2 ? "#4A1D56" : "#A48EAA"}
               me={48}
             />
             <IconBracketsAngle size={ active === 2 ? 38 : 30} color={active === 2 ? "#000" : "#666"} />
@@ -192,12 +230,31 @@ const Services = () => {
               </Text>
             </Box>
           </Flex>
+          <Flex direction={"column"} gap={16} hiddenFrom={"md"} display={active === 2 ? "flex" : "none"} style={{transition: "all 0.5s ease-in-out"}}>
+          {services[2].map((service, index) => (
+          <Card key={index} radius={"16"} h={"fit-content"}>
+            <Flex gap={16}>
+              <Text fz={16} fw={600}>
+                {index + 1}.
+              </Text>
+              <Box>
+                <Text fz={16} fw={600}>
+                  {service.title}
+                </Text>
+                <Text fz={13} fw={400} c={"#333"}>
+                  {service.description}
+                </Text>
+              </Box>
+            </Flex>
+          </Card>
+          ))}
+          </Flex>
           <Flex w={"100%"} onClick={() => handleClick(3)} style={{ cursor: "pointer" }}>
             <Divider
               size={4}
               style={{ borderRadius: 8 }}
               orientation="vertical"
-              color="#A48EAA"
+              color={active === 3 ? "#4A1D56" : "#A48EAA"}
               me={48}
             />
             <IconBrandFigma size={ active === 3 ? 38 : 30} color={active === 3 ? "#000" : "#666"} />
@@ -207,12 +264,31 @@ const Services = () => {
               </Text>
             </Box>
           </Flex>
+          <Flex direction={"column"} gap={16} hiddenFrom={"md"} display={active === 3 ? "flex" : "none"} style={{transition: "all 0.5s ease-in-out"}}>
+          {services[3].map((service, index) => (
+          <Card key={index} radius={"16"} h={"fit-content"}>
+            <Flex gap={16}>
+              <Text fz={16} fw={600}>
+                {index + 1}.
+              </Text>
+              <Box>
+                <Text fz={16} fw={600}>
+                  {service.title}
+                </Text>
+                <Text fz={13} fw={400} c={"#333"}>
+                  {service.description}
+                </Text>
+              </Box>
+            </Flex>
+          </Card>
+          ))}
+          </Flex>
           <Flex w={"100%"} onClick={() => handleClick(4)} style={{ cursor: "pointer" }}>
             <Divider
               size={4}
               style={{ borderRadius: 8 }}
               orientation="vertical"
-              color="#A48EAA"
+              color={active === 4 ? "#4A1D56" : "#A48EAA"}
               me={48}
             />
             <IconActivityHeartbeat size={ active === 4 ? 38 : 30} color={active === 4 ? "#000" : "#666"} />
@@ -222,7 +298,27 @@ const Services = () => {
               </Text>
             </Box>
           </Flex>
+          <Flex direction={"column"} gap={16} hiddenFrom={"md"} display={active === 4 ? "flex" : "none"} style={{transition: "all 0.5s ease-in-out"}}>
+          {services[4].map((service, index) => (
+          <Card key={index} radius={"16"} h={"fit-content"}>
+            <Flex gap={16}>
+              <Text fz={16} fw={600}>
+                {index + 1}.
+              </Text>
+              <Box>
+                <Text fz={16} fw={600}>
+                  {service.title}
+                </Text>
+                <Text fz={13} fw={400} c={"#333"}>
+                  {service.description}
+                </Text>
+              </Box>
+            </Flex>
+          </Card>
+          ))}
+          </Flex>
         </Flex>
+        
         <Flex w={"50%"} direction={"column"} gap={16} justify={"space-around"} visibleFrom={"md"}>
           {services[active].map((service, index) => (
           <Card key={index} radius={"16"} h={"fit-content"}>
