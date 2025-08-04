@@ -40,3 +40,45 @@ a {
     color-scheme: dark;
   }
 }
+
+
+.portfolio-bg {
+  background-image: url("/protfolio-bg.svg");
+  background-size: 35%;
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+
+.portfolio-drawer .mantine-Drawer-body {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.portfolio-drawer header {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+
+@media (max-width: 768px) {
+  .mantine-Drawer-content {
+    flex: 100% !important;
+    overflow-y: hidden !important;
+  }
+
+  .see-website-btn {
+    position: fixed;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .portfolio-drawer .mantine-Drawer-body {
+    padding-left: 18px;
+    padding-right: 20px;
+  }
+  .portfolio-drawer header {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
