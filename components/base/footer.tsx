@@ -82,7 +82,7 @@ export default function Footer() {
               <Text c={"white"}>+43 1 513 78 05</Text>
             </Box>
             <Text c={"#999"} fz={10}>
-              Copyright © 2025 All Rights Reserved by Big-Bang
+              Copyright © 2025 All Rights Reserved by Graph
             </Text>
           </Flex>
         </Flex>

@@ -8,6 +8,7 @@ import {
   IconHeartHandshake,
 } from "@tabler/icons-react";
 import Autoplay from "embla-carousel-autoplay";
+import Link from "next/link";
 import { useRef } from "react";
 
 export default function Home() {
@@ -49,21 +50,23 @@ export default function Home() {
               We craft UI/UX, websites, apps, and business solutions for
               seamless, high-performing digital experiences.
             </Text>
-            <Button
-              w={170}
-              mt={32}
-              fz={16}
-              fw={400}
-              h={48}
-              bg="#000"
-              px={16}
-              py={8}
-              c={"#fff"}
-              radius={8}
-              bd={0}
-            >
-              Explore our works
-            </Button>
+            <Link href="/portfolio">
+              <Button
+                w={170}
+                mt={32}
+                fz={16}
+                fw={400}
+                h={48}
+                bg="#000"
+                px={16}
+                py={8}
+                c={"#fff"}
+                radius={8}
+                bd={0}
+              >
+                Explore our works
+              </Button>
+            </Link>
           </Box>
           <Box w={{ base: "100%", md: 459 }}>
             <Image src="/graph.png" alt="Graph" />
@@ -167,16 +170,25 @@ export default function Home() {
       </Flex>
       <Flex
         w={"100%"}
-        p={{base: 32, md: 40}}
+        p={{ base: 32, md: 40 }}
         bg={"#f5f5f5"}
         direction={"column"}
         align={"center"}
       >
-        <Text component={"h1"} fz={{base: 25, md: 39}} fw={{base: 600, md: 400}}>
+        <Text
+          component={"h1"}
+          fz={{ base: 25, md: 39 }}
+          fw={{ base: 600, md: 400 }}
+        >
           Our works crossed
         </Text>
-        <Flex mt={32} gap={64} direction={{base: "column", md: "row"}}>
-          <Image src="/work-locations.png" alt="Graph works locations" w={{base: "100%", md: "auto"}} h={{base: "auto", md: 260}}/>
+        <Flex mt={32} gap={64} direction={{ base: "column", md: "row" }}>
+          <Image
+            src="/work-locations.png"
+            alt="Graph works locations"
+            w={{ base: "100%", md: "auto" }}
+            h={{ base: "auto", md: 260 }}
+          />
           <Flex direction={"column"} gap={16}>
             <Text component="h2" fz={20}>
               <Text component="span" fz={31} fw={600}>
@@ -205,7 +217,15 @@ export default function Home() {
           </Flex>
         </Flex>
       </Flex>
-      <Flex w={"100%"} justify={"center"} gap={48} h={{base: "auto", md: "80vh"}} p={{base: 32, md: 0}} align={"center"} direction={{base: "column", md: "row"}}>
+      <Flex
+        w={"100%"}
+        justify={"center"}
+        gap={48}
+        h={{ base: "auto", md: "80vh" }}
+        p={{ base: 32, md: 0 }}
+        align={"center"}
+        direction={{ base: "column", md: "row" }}
+      >
         <Flex direction={"column"} gap={16}>
           <Card w={309} bg={"#E6E6E6"} p={16} radius={12} h={96}>
             <Flex gap={16}>
@@ -256,19 +276,27 @@ export default function Home() {
             development, and data-driven dashboards. Let’s build something
             amazing together!
           </Text>
-          <Button
-            bg={"#000"}
-            w={"fit-content"}
-            mt={32}
-            c={"#fff"}
-            radius={8}
-            bd={0}
-          >
-            Services
-          </Button>
+          <Link href="/services">
+            <Button
+              bg={"#000"}
+              w={"fit-content"}
+              mt={32}
+              c={"#fff"}
+              radius={8}
+              bd={0}
+            >
+              Services
+            </Button>
+          </Link>
         </Flex>
       </Flex>
-      <Image w={"100%"} src={"/howto.png"} alt="How to" />
+      <Image w={"100%"} src={"/howto.png"} alt="How to" visibleFrom="md" />
+      <Image
+        w={"100%"}
+        src={"/workflow-mobile.png"}
+        alt="How to"
+        hiddenFrom="md"
+      />
     </>
   );
 }
