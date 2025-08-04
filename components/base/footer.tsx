@@ -63,23 +63,21 @@ export default function Footer() {
                 About US
               </Text>
             </Link>
-            <Link href={"/"}>
-              <Text c={"white"} style={{ textDecoration: "underline" }}>
-                Contact us
-              </Text>
-            </Link>
-            <Link href={"/"}>
-              <Text c={"white"} style={{ textDecoration: "underline" }}>
-                Blog
-              </Text>
-            </Link>
           </Flex>
-          <Flex w={{base: "100%", md: "60%"}} justify={"space-between"} h={"fit-content"} direction={{base: "column", md: "row"}} gap={{base: 32, md: 0}}>
+          <Flex w={{base: "100%", md: "60%"}} justify={"space-between"} h={"fit-content"} direction={{base: "column", md: "row"}} gap={{base: 32, md: 0}} align={"center"}>
             <Box ta={"left"}>
               <Text c={"white"}>
-                402 Building, 1, 1010 Wien, AustriaVienna, Austria
+              Sharif Box Coworking - Ahmad Ghasemi St - Akbary Blvd - Tarasht - Tehran - Iran
               </Text>
-              <Text c={"white"}>+43 1 513 78 05</Text>
+              <Text c={"white"}>
+              Almoj - Mosqat - Oman
+              </Text>
+              <Text c={"white"}>
+              Simmering Haupt Straße - Vienna - Astria
+              </Text>
+              <Text c={"white"} mt={24}>+98 938 144 7322</Text>
+              <Text c={"white"}>+43 665657 01224</Text>
+              <Text c={"white"}>+968 9207 1031</Text>
             </Box>
             <Text c={"#999"} fz={10}>
               Copyright © 2025 All Rights Reserved by Graph
