@@ -1,3 +1,5 @@
+"use client";
+
 import {
   BackgroundImage,
   Box,
@@ -13,12 +15,110 @@ import {
   IconArrowRight,
   IconBracketsAngle,
   IconBrandFigma,
-  IconHeartbeat,
   IconHeartHandshake,
   IconSearch,
 } from "@tabler/icons-react";
+import { useState } from "react";
 
 const Services = () => {
+  const [active, setActive] = useState(0);
+
+  const services = [
+    [
+      {
+        title: "Personal Branding Websites",
+        description: "Tailored websites that reflect your personality and goals — ideal for consultants, coaches, or creators.",
+      },
+      {
+        title: "Corporate Websites",
+        description: "Clean, professional sites that showcase your business and build trust with your audience.",
+      },
+      {
+        title: "Event & Campaign Pages",
+        description: "Dynamic landing pages for launches, campaigns, and special events — made to convert.",
+      },
+      {
+        title: "Portfolio Websites",
+        description: "Sleek, interactive portfolios to present your work in style and attract new opportunities.",
+      },
+    ],
+    [
+      {
+        title: "Online Stores",
+        description: "From product pages to payment gateways, we build stores that are fast, scalable, and user-friendly.",
+      },
+      {
+        title: "Multi-vendor Marketplaces",
+        description: "Connect buyers and sellers in a smooth, intuitive experience that grows with your business.",
+      },
+      {
+        title: "SaaS Applications",
+        description: "We bring your SaaS idea to life — from MVP to fully operational, cloud-ready products.",
+      },
+      {
+        title: "Subscription Models",
+        description: "Custom features to manage recurring payments, trials, and customer access — all seamlessly integrated.",
+      },
+    ],
+    [
+      {
+        title: "Startup MVP Development",
+        description: "Get your idea off the ground fast with a lean, functional MVP tailored to your needs.",
+      },
+      {
+        title: "Pitch-ready Prototypes",
+        description: "Clickable, real-looking prototypes that help you pitch with confidence.",
+      },
+      {
+        title: "Product-Market Fit Optimization",
+        description: "We iterate fast, using feedback to align your product with real user needs.",
+      },
+      {
+        title: "Scalable Infrastructure",
+        description: "Build a solid foundation to grow your product without worrying about tech limitations.",
+      },
+    ],
+    [
+      {
+        title: "Wireframing & User Flows",
+        description: "Visualize user journeys and interaction logic with smooth, thoughtful flow design.",
+      },
+      {
+        title: "UI Design Systems",
+        description: "We create consistent, scalable design systems to speed up future growth.",
+      },
+      {
+        title: "UX Research & Testing",
+        description: "Understand your users, improve usability, and create delightful digital experiences.",
+      },
+      {
+        title: "Mobile-first Design",
+        description: "Designs that look and feel amazing on every screen — from mobile to desktop.",
+      },
+    ],
+    [
+      {
+        title: "Custom Admin Dashboards",
+        description: "Manage your business with intuitive dashboards customized to your workflows.",
+      },
+      {
+        title: "Real-time Data Monitoring",
+        description: "Get up-to-the-second insights with fast, secure data visualizations.",
+      },
+      {
+        title: "KPI Tracking Systems",
+        description: "We help you track the numbers that matter most — in a clean, digestible format.",
+      },
+      {
+        title: "User Behavior Analytics",
+        description: "See how users interact with your product, and make smarter decisions based on real data.",
+      },
+    ],
+  ];
+
+  const handleClick = (index: number) => {
+    setActive(index);
+  };
   return (
     <>
       <Flex
@@ -47,7 +147,7 @@ const Services = () => {
           Our Services
         </Text>
         <Flex w={"49%"} wrap={"wrap"} gap={48}>
-          <Flex maw={397}>
+          <Flex maw={397} onClick={() => handleClick(0)} style={{ cursor: "pointer" }}>
             <Divider
               size={4}
               style={{ borderRadius: 8 }}
@@ -55,18 +155,14 @@ const Services = () => {
               color="#A48EAA"
               me={48}
             />
-            <IconSearch size={38} />
+            <IconSearch size={ active === 0 ? 38 : 30} color={active === 0 ? "#000" : "#666"} />
             <Box ms={16}>
-              <Text fz={20} fw={600}>
+              <Text fz={20} fw={600} c={active === 0 ? "#000" : "#666"}>
                 Custom Website Design
-              </Text>
-              <Text fz={13} fw={400} c={"#333"}>
-                The discovery level identifies your business needs to ensure
-                solutions align with your goals.
               </Text>
             </Box>
           </Flex>
-          <Flex w={"100%"}>
+          <Flex w={"100%"} onClick={() => handleClick(1)} style={{ cursor: "pointer" }}>
             <Divider
               size={4}
               style={{ borderRadius: 8 }}
@@ -74,14 +170,14 @@ const Services = () => {
               color="#A48EAA"
               me={48}
             />
-            <IconHeartHandshake size={30} />
+            <IconHeartHandshake size={ active === 1 ? 38 : 30} color={active === 1 ? "#000" : "#666"} />
             <Box ms={16}>
-              <Text fz={20} fw={600}>
+              <Text fz={20} fw={600} c={active === 1 ? "#000" : "#666"}>
                 E-commerce & SaaS Platforms
               </Text>
             </Box>
           </Flex>
-          <Flex w={"100%"}>
+          <Flex w={"100%"} onClick={() => handleClick(2)} style={{ cursor: "pointer" }}>
             <Divider
               size={4}
               style={{ borderRadius: 8 }}
@@ -89,14 +185,14 @@ const Services = () => {
               color="#A48EAA"
               me={48}
             />
-            <IconBracketsAngle size={30} />
+            <IconBracketsAngle size={ active === 2 ? 38 : 30} color={active === 2 ? "#000" : "#666"} />
             <Box ms={16}>
-              <Text fz={20} fw={600}>
+              <Text fz={20} fw={600} c={active === 2 ? "#000" : "#666"}>
                 Web-based Startup Projects
               </Text>
             </Box>
           </Flex>
-          <Flex w={"100%"}>
+          <Flex w={"100%"} onClick={() => handleClick(3)} style={{ cursor: "pointer" }}>
             <Divider
               size={4}
               style={{ borderRadius: 8 }}
@@ -104,14 +200,14 @@ const Services = () => {
               color="#A48EAA"
               me={48}
             />
-            <IconBrandFigma size={30} />
+            <IconBrandFigma size={ active === 3 ? 38 : 30} color={active === 3 ? "#000" : "#666"} />
             <Box ms={16}>
-              <Text fz={20} fw={600}>
+              <Text fz={20} fw={600} c={active === 3 ? "#000" : "#666"}>
                 Custom Website Design
               </Text>
             </Box>
           </Flex>
-          <Flex w={"100%"}>
+          <Flex w={"100%"} onClick={() => handleClick(4)} style={{ cursor: "pointer" }}>
             <Divider
               size={4}
               style={{ borderRadius: 8 }}
@@ -119,63 +215,32 @@ const Services = () => {
               color="#A48EAA"
               me={48}
             />
-            <IconActivityHeartbeat size={30} />
+            <IconActivityHeartbeat size={ active === 4 ? 38 : 30} color={active === 4 ? "#000" : "#666"} />
             <Box ms={16}>
-              <Text fz={20} fw={600}>
+              <Text fz={20} fw={600} c={active === 4 ? "#000" : "#666"}>
                 Custom Website Design
               </Text>
             </Box>
           </Flex>
         </Flex>
-        <Flex w={"50%"} direction={"column"} gap={16} justify={"space-around"}>
-          <Card radius={"16"} h={"fit-content"}>
+        <Flex w={"50%"} direction={"column"} gap={16} justify={"space-around"} visibleFrom={"md"}>
+          {services[active].map((service, index) => (
+          <Card key={index} radius={"16"} h={"fit-content"}>
             <Flex gap={16}>
               <Text fz={16} fw={600}>
-                1.
+                {index + 1}.
               </Text>
               <Box>
                 <Text fz={16} fw={600}>
-                  Benchmark
+                  {service.title}
                 </Text>
                 <Text fz={13} fw={400} c={"#333"}>
-                  Benchmark your business and gain deeper insights into your
-                  audience, so we can provide a solution tailored just for you.
+                  {service.description}
                 </Text>
               </Box>
             </Flex>
           </Card>
-          <Card radius={"16"} h={"fit-content"}>
-            <Flex gap={16}>
-              <Text fz={16} fw={600}>
-                2.
-              </Text>
-              <Box>
-                <Text fz={16} fw={600}>
-                  Benchmark
-                </Text>
-                <Text fz={13} fw={400} c={"#333"}>
-                  Benchmark your business and gain deeper insights into your
-                  audience, so we can provide a solution tailored just for you.
-                </Text>
-              </Box>
-            </Flex>
-          </Card>
-          <Card radius={"16"} h={"fit-content"}>
-            <Flex gap={16}>
-              <Text fz={16} fw={600}>
-                3.
-              </Text>
-              <Box>
-                <Text fz={16} fw={600}>
-                  Benchmark
-                </Text>
-                <Text fz={13} fw={400} c={"#333"}>
-                  Benchmark your business and gain deeper insights into your
-                  audience, so we can provide a solution tailored just for you.
-                </Text>
-              </Box>
-            </Flex>
-          </Card>
+          ))}
         </Flex>
       </Flex>
       <BackgroundImage src="/Rectangle.png" w={"100%"} h={"100%"}>
