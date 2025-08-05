@@ -1,4 +1,4 @@
-import { Box, Card, Divider, Flex, Image, Text } from "@mantine/core";
+import { Box, Divider, Flex, Image, Text } from "@mantine/core";
 import {
   IconBrandInstagram,
   IconBrandLinkedin,

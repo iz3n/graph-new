@@ -45,7 +45,7 @@ const Lannest = () => {
           guidance of top-tier instructors.
         </Text>
         <Text component="h3" mb={16} fz={20} fw={600} mt={32}>
-          Graph's Role
+          Graph&rsquo;s Role
         </Text>
         <List>
           <List.Item fz={16} fw={400}>Ideation and instructional flow design</List.Item>

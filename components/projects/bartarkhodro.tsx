@@ -42,7 +42,7 @@ const Bartarkhodro = () => {
         Bartarkhodro is a search-focused platform designed for importers of truck spare parts, helping them locate the exact part using OEM codes, minimizing costly order mistakes.
         </Text>
         <Text component="h3" mb={16} fz={20} fw={600} mt={32}>
-          Graph's Role
+          Graph&rsquo;s Role
         </Text>
         <List>
           <List.Item fz={16} fw={400}>End-to-end solution from idea to delivery</List.Item>
